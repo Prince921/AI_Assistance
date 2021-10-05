@@ -5,55 +5,14 @@ import webbrowser as wb
 import psutil
 import pyjokes
 import pyautogui
-
+from speak immport speak
+from wish import wishMe
+from date import date_
+from time import time
+from youtube import youTube
 
 engine = pyttsx3.init()
 
-
-def speak(audio):
-    engine.say(audio)
-    engine.runAndWait()
-
-def time_():
-    Time = datetime.datetime.now().strftime("%H:%M:%S")
-    speak("The current time is")
-    speak(Time)
-def date_():
-    year = datetime.datetime.now().year
-    month = datetime.datetime.now().month
-    date = datetime.datetime.now().day
-    speak("Today's date is")
-    speak(date)
-    speak(month)
-    speak(year)
-def wishMe():
-    
-    
-    hour = datetime.datetime.now().hour
-    if hour>=6 and hour<12:
-        speak("Good Morning Sir. ")
-    elif hour>=12 and hour<18:
-        speak("Good Afternoon Sir. ")
-    elif hour>=18 and hour<24:
-        speak("Good evening Sir. ")
-    else:
-        speak("It's too sir I think you should sleep now. Tell me what can I fo you.")
-    speak("Welcome Back, How may I help you?")
-def searchChrome():
-    speak('What should I search')
-    y = input('Type here')
-    
-    speak('searching for'+y+'on Chrome')
-    chromepath = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
-    search = y.lower()
-    wb.get(chromepath).open_new_tab(search+'.com')
-def youTube():
-    speak('What Should I search in Youtube')
-    z = input('Type Here')
-    speak('searching for'+z+'on youtube')
-    search_term = z.lower()
-    speak('Here we go to Youtube')
-    wb.open('https://www.youtube.com/results?search_query='+search_term)
 def Google():
     speak('What should I search in Google?')
     x = input('Type here')
