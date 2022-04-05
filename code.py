@@ -13,6 +13,11 @@ from youtube import youTube
 
 engine = pyttsx3.init()
 
+def Next_Locate():
+    speak('What should I find?')
+    x = input('Type here')
+    speak('You asked to find'+x)
+    wb.open_new_tab('http://www.google.com/maps/place/'+x)
 def Google():
     speak('What should I search in Google?')
     x = input('Type here')
