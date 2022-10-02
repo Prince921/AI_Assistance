@@ -47,6 +47,13 @@ def Locate():
     x = input('Type here')
     speak('You asked to find'+x)
     wb.open_new_tab('http://www.google.com/maps/place/'+x)
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+def time_():
+    Time = datetime.datetime.now().strftime("%H:%M:%S")
+    speak("The current time is")
+    speak(Time)
 def Temp_convert():
     speak('Welcome to this Temperature Conversion Porgram')
     speak('Enter 1 if you want to convert from Celsius')
