@@ -62,6 +62,13 @@ def wheather():
     battery = psutil.sensors_battery()
     speak('Battery is at')
     speak(battery.percent) 
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+def time_():
+    Time = datetime.datetime.now().strftime("%H:%M:%S")
+    speak("The current time is")
+    speak(Time)
 def Temp_convert():
     speak('Welcome to this Temperature Conversion Porgram')
     speak('Enter 1 if you want to convert from Celsius')
